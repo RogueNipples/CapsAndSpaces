@@ -17,6 +17,8 @@ function respond() {
   var imageRegex = /^image$/;
   var ImageRegex = /^Image$/;
   var ImageNumRegex = /^image \d$/;
+  var ImageNumRegexLarge = /^image \d\d$/;
+  var ImageNumRegexLarger = /^image \d\d\d$/;
   var rouletteRegex = /^end me$/;
   var ggRegex = /^gg$/;
   var reportedRegex = /^reported$/;
@@ -89,6 +91,30 @@ if (request.name != "same") {
     
     var wewString = request.text;
     var splitWewString = wewString.substr(6,1);
+    var b;
+    for (b = 0; b < splitWewString; b++)
+    {
+      this.res.writeHead(200);
+      postMessage2();
+      this.res.end();
+    }
+  }
+  else if (request.text && ImageNumRegexLarge.test(request.text)) {
+    
+    var wewString = request.text;
+    var splitWewString = wewString.substr(6,2);
+    var b;
+    for (b = 0; b < splitWewString; b++)
+    {
+      this.res.writeHead(200);
+      postMessage2();
+      this.res.end();
+    }
+  }
+  else if (request.text && ImageNumRegexLarger.test(request.text)) {
+    
+    var wewString = request.text;
+    var splitWewString = wewString.substr(6,3);
     var b;
     for (b = 0; b < splitWewString; b++)
     {
