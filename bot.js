@@ -199,7 +199,7 @@ function postMessage2() {
         textuals += possible.charAt(Math.floor(Math.random() * possible.length));
   
   var stringerino = "http://i.imgur.com/";
-  var string2 = ".png";
+  var string2 = ".png @Zo";
   var penultimate = stringerino.concat(textuals);
   var ultimate = penultimate.concat(string2);
   
