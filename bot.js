@@ -5,151 +5,16 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]);
-  var ayyRegex = /^ayy$/;
-  var wewRegex = /^wew$/;
-  var oogaRegex = /^ooga$/;
-  var kysRegex = /^kys$/;
-  var thankRegex = /^thank$/;
-  var dootRegex = /^doot$/;
-  var heheRegex = /^hehe$/;
-  var SameRegex = /^Same$/;
-  var sameRegex = /^same$/;
-  var imageRegex = /^image$/;
-  var ImageRegex = /^Image$/;
-  var ImageNumRegex = /^image \d$/;
-  var ImageNumRegexLarge = /^image \d\d$/;
-  var ImageNumRegexLarger = /^image \d\d\d$/;
-  var rouletteRegex = /^end me$/;
-  var ggRegex = /^gg$/;
-  var reportedRegex = /^reported$/;
-  var coolRegex = /^cls2$/;
-  var succRegex = /^Succ\?$/;
+  var ayyRegex = /^yee$/;
   
   
-if (request.name != "same") {
-  if(request.text && ayyRegex.test(request.text)) {
+if (request.name != "yee") {
+  if(request.text && !ayyRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("lmao");
-    this.res.end();
-  }
-  else if (request.text && wewRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("lad");
-    this.res.end();
-  }
-  else if (request.text && sameRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("same");
-    this.res.end();
-  }
-  else if (request.text && SameRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("Same");
-    this.res.end();
-  }
-  else if (request.text && oogaRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("booga");
-    this.res.end();
-  }
-  else if (request.text && kysRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("brb kms");
-    this.res.end();
-  }
-  else if (request.text && thankRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("welc");
-    this.res.end();
-  }
-  else if (request.text && dootRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("doot");
-    this.res.end();
-  }
-  else if (request.text && heheRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("xd");
-    this.res.end();
-  }
-  else if (request.text && succRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessageSucc();
-    this.res.end();
-  }
-  else if (request.text && imageRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage2();
-    this.res.end();
-  }
-  else if (request.text && ImageRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage2();
-    this.res.end();
-  }
-  else if (request.text && ImageNumRegex.test(request.text)) {
-    
-    var wewString = request.text;
-    var splitWewString = wewString.substr(6,1);
-    var b;
-    for (b = 0; b < splitWewString; b++)
-    {
-      this.res.writeHead(200);
-      postMessage2();
-      this.res.end();
-    }
-  }
-  else if (request.text && ImageNumRegexLarge.test(request.text)) {
-    
-    var wewString = request.text;
-    var splitWewString = wewString.substr(6,2);
-    var b;
-    for (b = 0; b < splitWewString; b++)
-    {
-      this.res.writeHead(200);
-      postMessage2();
-      this.res.end();
-    }
-  }
-  else if (request.text && ImageNumRegexLarger.test(request.text)) {
-    
-    var wewString = request.text;
-    var splitWewString = wewString.substr(6,3);
-    var b;
-    for (b = 0; b < splitWewString; b++)
-    {
-      this.res.writeHead(200);
-      postMessage2();
-      this.res.end();
-    }
-  }
-  else if (request.text && rouletteRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage3();
-    this.res.end();
-  }
-  else if (request.text && ggRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("end your life faggot");
-    this.res.end();
-  }
-  else if (request.text && reportedRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("Ihre Berichtseinreichung wurde an die Valve-Unterstützung gesendet. Vielen Dank für die Gemeinschaft der bessere Ort!");
-    this.res.end();
-  }
-  else if (request.text && coolRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage4();
-    this.res.end();
-  }
-  else {
-    console.log("don't care");
-    this.res.writeHead(200);
+    postMessage("yee");
     this.res.end();
   }
   
-}
 }
 
 function postMessage(input) {
