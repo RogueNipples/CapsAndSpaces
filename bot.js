@@ -5,16 +5,25 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]);
-  var ayyRegex = /^yee$/;
+  var botRegex = /\b\S{4,}\b/;
+  var response;
+  
+  {
+      var substring = request.text.match(/\b\S{4,}or\b/);
+	}
+  
+  response = substring.split('').join(' ').toUpperCase();
   
   
-if (request.name != "yee") {
-  if(request.text && !ayyRegex.test(request.text)) {
+  
+  
+  if (Math.floor(Math.random()*1.4)){
+  if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("yee");
+    postMessage(response);
     this.res.end();
   }
-}
+  }
   
 }
 
