@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]);
-  var botRegex = /\b\S{4,}\b/;
+  var botRegex = /\b\S{8,}\b/;
   var response;
   
   
@@ -17,7 +17,7 @@ function respond() {
   if(request.text && botRegex.test(request.text)) {
 	  
 	  {
-      var substring = request.text.match(/\b\S{4,}or\b/);
+      var substring = request.text.match(/\b\S{8,}\b/);
   }
   
   response = substring.split('').join(' ').toUpperCase();
