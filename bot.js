@@ -20,7 +20,7 @@ function respond() {
       var substring = request.text.match(/\b\S{8,}\b/);
   }
   
-  response = substring.split('').join(' ').toUpperCase();
+  response = substring[0].split('').join(' ').toUpperCase();
 	  
 	  
 	  
