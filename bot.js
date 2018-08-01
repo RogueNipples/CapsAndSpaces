@@ -8,17 +8,22 @@ function respond() {
   var botRegex = /\b\S{4,}\b/;
   var response;
   
-  {
-      var substring = request.text.match(/\b\S{4,}or\b/);
-	}
   
-  response = substring.split('').join(' ').toUpperCase();
   
   
   
   
   if (Math.floor(Math.random()*1.4)){
   if(request.text && botRegex.test(request.text)) {
+	  
+	  {
+      var substring = request.text.match(/\b\S{4,}or\b/);
+  }
+  
+  response = substring.split('').join(' ').toUpperCase();
+	  
+	  
+	  
     this.res.writeHead(200);
     postMessage(response);
     this.res.end();
