@@ -6,10 +6,14 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]);
   var botRegex = /\b\S{10,}\b/;
+	var botRegex2 = /[N,n]ut/;
   var response;
   
-  
-  
+  if(request.text && botRegex2.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("N U T");
+    this.res.end();
+  }
   
   
   
