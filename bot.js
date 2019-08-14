@@ -17,7 +17,7 @@ function respond() {
   
   
   
-  if (Math.floor(Math.random()*1.4)){
+  if (Math.floor(Math.random()*1.2)){
   if(request.text && botRegex.test(request.text)) {
 	  
 	  {
